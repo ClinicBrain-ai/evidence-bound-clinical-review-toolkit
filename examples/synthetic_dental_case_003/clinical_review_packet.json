@@ -1,0 +1,123 @@
+{
+  "packet_id": "synthetic-dental-case-003",
+  "case_type": "synthetic_dental_healthcare_adjacent_conflicting_source_summary",
+  "ai_output_type": "draft_follow_up_summary",
+  "original_ai_output": {
+    "text": "The follow-up notes suggest the lower left discomfort after the recent dental visit is improving and appears to be resolving without a clearly localized concern. The chewing sensitivity described earlier is likely part of the same improving post-visit course.\n\nThe summary can present the situation as improving lower left post-visit discomfort and note that no distinct concern is apparent from the available information.\n\nThis draft should not be treated as a diagnosis, treatment recommendation, patient-facing instruction, or clinical assessment."
+  },
+  "source_evidence": [
+    {
+      "evidence_id": "src-001",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "source note A reports lower left tooth-area discomfort after a recent dental visit",
+      "excerpt": "Source note A says an adult reports discomfort around a lower left tooth area after a recent dental visit."
+    },
+    {
+      "evidence_id": "src-002",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "source note A reports chewing-related discomfort",
+      "excerpt": "The note states that the discomfort is most noticeable when chewing, but it does not include the visit date or procedure details."
+    },
+    {
+      "evidence_id": "src-003",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "source note B reports improving and not clearly localized symptoms",
+      "excerpt": "Source note B says the person later described the symptoms as improving and \"not clearly in one spot.\""
+    },
+    {
+      "evidence_id": "src-004",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "timing between notes is unclear",
+      "excerpt": "The timing between note A and note B is unclear."
+    }
+  ],
+  "missing_information": [
+    {
+      "field": "dental visit date",
+      "status": "missing",
+      "reason": "The source summary refers to a recent dental visit but does not provide the visit date."
+    },
+    {
+      "field": "procedure details",
+      "status": "missing",
+      "reason": "The source summary does not include details about what happened during the dental visit."
+    },
+    {
+      "field": "timing between source notes",
+      "status": "unknown",
+      "reason": "The timing between source note A and source note B is unclear."
+    },
+    {
+      "field": "recent dental imaging",
+      "status": "missing",
+      "reason": "The source summary does not include recent imaging context."
+    },
+    {
+      "field": "medication history",
+      "status": "missing",
+      "reason": "Medication context is not available for review."
+    },
+    {
+      "field": "allergy information",
+      "status": "missing",
+      "reason": "Allergy context is not available for review."
+    },
+    {
+      "field": "clinician exam findings",
+      "status": "missing",
+      "reason": "The source summary does not include documented exam findings."
+    },
+    {
+      "field": "source conflict explanation",
+      "status": "unknown",
+      "reason": "The source summary contains differing symptom descriptions without explaining the relationship between them."
+    }
+  ],
+  "risk_assessment": {
+    "risk_level": "medium",
+    "reason": "The output is healthcare-adjacent and smooths over conflicting source information while key review context is missing. This is a workflow routing label, not a clinical risk score.",
+    "source_conflict_note": "Source note A describes localized lower left discomfort most noticeable when chewing. Source note B describes symptoms as improving and not clearly localized. The timing and relationship between the notes are unclear.",
+    "unsupported_or_sensitive_claims": [
+      {
+        "claim": "resolving without a clearly localized concern",
+        "review_note": "The source reports improving and not clearly localized symptoms in one note, but another note reports lower left tooth-area discomfort. The source does not resolve the difference."
+      },
+      {
+        "claim": "chewing sensitivity is likely part of the same improving post-visit course",
+        "review_note": "The source does not establish the timing, relationship, or cause linking the earlier chewing sensitivity to the later improving description."
+      }
+    ]
+  },
+  "review_requirement": {
+    "human_review_required": true,
+    "required_reviewer": "qualified human reviewer for healthcare-adjacent content",
+    "review_reason": "The draft smooths over conflicting source information and presents the situation too confidently under incomplete context."
+  },
+  "review_status": {
+    "status": "reviewed",
+    "reviewer_role": "healthcare-adjacent content reviewer",
+    "decision": "escalated",
+    "reviewer_comment": "Escalate the packet for additional workflow review because the draft does not preserve the conflicting source descriptions and the timing between notes is unclear."
+  },
+  "audit_events": [
+    {
+      "event_id": "audit-001",
+      "event_type": "packet_created",
+      "timestamp": "2026-06-11T00:20:00Z",
+      "actor": "toolkit_demo",
+      "details": "Clinical Review Packet created from third synthetic case and AI-generated draft output."
+    },
+    {
+      "event_id": "audit-002",
+      "event_type": "human_review_recorded",
+      "timestamp": "2026-06-11T00:25:00Z",
+      "actor": "synthetic_reviewer",
+      "details": "Reviewer escalated the draft because it smoothed over conflicting source information under incomplete context."
+    }
+  ]
+}
+

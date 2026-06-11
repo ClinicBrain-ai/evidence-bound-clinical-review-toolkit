@@ -1,0 +1,110 @@
+{
+  "packet_id": "synthetic-dental-case-002",
+  "case_type": "synthetic_dental_healthcare_adjacent_follow_up_summary",
+  "ai_output_type": "draft_follow_up_summary",
+  "original_ai_output": {
+    "text": "The reported upper left discomfort after the recent dental procedure appears most consistent with routine post-procedure irritation from a recent restorative visit. The biting sensitivity likely reflects temporary adjustment after the procedure rather than a separate concern.\n\nThe follow-up summary can describe the situation as expected post-procedure sensitivity and note that the record supports routine follow-up review.\n\nThis draft should not be treated as a diagnosis, treatment recommendation, or patient-facing instruction."
+  },
+  "source_evidence": [
+    {
+      "evidence_id": "src-001",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "upper left discomfort after a recent dental procedure",
+      "excerpt": "A 36-year-old adult reports discomfort near an upper left tooth area after a recent dental procedure."
+    },
+    {
+      "evidence_id": "src-002",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "intermittent sensitivity when biting",
+      "excerpt": "The person describes intermittent sensitivity when biting and notes that the area \"feels different\" compared with before the visit."
+    },
+    {
+      "evidence_id": "src-003",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "restorative follow-up label only",
+      "excerpt": "The summary includes a scheduling note labeled \"restorative follow-up,\" but it does not include the procedure date, full procedure details, recent imaging, medication history, allergy information, or clinician exam findings."
+    }
+  ],
+  "missing_information": [
+    {
+      "field": "procedure date",
+      "status": "missing",
+      "reason": "The source summary says the procedure was recent but does not provide a date."
+    },
+    {
+      "field": "procedure type details",
+      "status": "missing",
+      "reason": "The draft implies a restorative procedure, but the source only includes a scheduling label and no procedure details."
+    },
+    {
+      "field": "recent dental imaging",
+      "status": "missing",
+      "reason": "The source summary does not include recent imaging context."
+    },
+    {
+      "field": "medication history",
+      "status": "missing",
+      "reason": "Medication context is not available for review."
+    },
+    {
+      "field": "allergy information",
+      "status": "missing",
+      "reason": "Allergy context is not available for review."
+    },
+    {
+      "field": "clinician exam findings",
+      "status": "missing",
+      "reason": "The source summary does not include documented exam findings."
+    },
+    {
+      "field": "cause of biting sensitivity",
+      "status": "unknown",
+      "reason": "The source reports biting sensitivity but does not establish a cause."
+    }
+  ],
+  "risk_assessment": {
+    "risk_level": "medium",
+    "reason": "The output is healthcare-adjacent and includes over-specific cause language that is not fully supported by the provided source material. This is a workflow routing label, not a clinical risk score.",
+    "unsupported_or_sensitive_claims": [
+      {
+        "claim": "routine post-procedure irritation from a recent restorative visit",
+        "review_note": "The source includes a restorative follow-up scheduling label but does not provide procedure type details, procedure date, imaging, or exam findings."
+      },
+      {
+        "claim": "expected post-procedure sensitivity",
+        "review_note": "The source reports discomfort and biting sensitivity, but does not establish that the symptoms are expected or routine."
+      }
+    ]
+  },
+  "review_requirement": {
+    "human_review_required": true,
+    "required_reviewer": "qualified human reviewer for healthcare-adjacent content",
+    "review_reason": "The draft contains unsupported or over-specific language about cause and expectedness under incomplete source context."
+  },
+  "review_status": {
+    "status": "reviewed",
+    "reviewer_role": "healthcare-adjacent content reviewer",
+    "decision": "requires_revision",
+    "reviewer_comment": "Revise the draft to remove over-specific cause language and keep the summary limited to supported source details and missing-context flags."
+  },
+  "audit_events": [
+    {
+      "event_id": "audit-001",
+      "event_type": "packet_created",
+      "timestamp": "2026-06-11T00:10:00Z",
+      "actor": "toolkit_demo",
+      "details": "Clinical Review Packet created from second synthetic case and AI-generated draft output."
+    },
+    {
+      "event_id": "audit-002",
+      "event_type": "human_review_recorded",
+      "timestamp": "2026-06-11T00:15:00Z",
+      "actor": "synthetic_reviewer",
+      "details": "Reviewer marked the draft as requiring revision because it used over-specific cause language under incomplete source context."
+    }
+  ]
+}
+

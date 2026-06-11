@@ -1,0 +1,95 @@
+{
+  "packet_id": "synthetic-dental-case-001",
+  "case_type": "synthetic_dental_healthcare_adjacent_summary",
+  "ai_output_type": "draft_summary",
+  "original_ai_output": {
+    "text": "The described lower right molar discomfort and gum tenderness may be consistent with localized irritation, inflammation, or a possible dental infection. Chewing sensitivity can occur when the area is inflamed or when there is an issue involving a tooth or surrounding gum tissue.\n\nBecause the person has not had a dental visit in over a year, the situation should be reviewed by a dental professional. Recent imaging and an examination would help clarify whether the symptoms are related to tooth structure, gum health, or another source of inflammation.\n\nThis draft should not be treated as a diagnosis or treatment recommendation."
+  },
+  "source_evidence": [
+    {
+      "evidence_id": "src-001",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "lower right molar discomfort",
+      "excerpt": "A 42-year-old adult reports discomfort around the lower right molar area for several days."
+    },
+    {
+      "evidence_id": "src-002",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "chewing sensitivity and mild gum tenderness",
+      "excerpt": "The person reports intermittent sensitivity when chewing and mild gum tenderness near the area."
+    },
+    {
+      "evidence_id": "src-003",
+      "source": "input_case_summary.md",
+      "source_anchor": "Supplied Summary",
+      "supports": "no dental visit in over a year",
+      "excerpt": "The summary notes that the individual has not had a dental visit in over a year."
+    }
+  ],
+  "missing_information": [
+    {
+      "field": "recent dental imaging",
+      "status": "missing",
+      "reason": "The draft references possible tooth or surrounding tissue involvement without imaging information."
+    },
+    {
+      "field": "medication history",
+      "status": "missing",
+      "reason": "Medication context is not available for review."
+    },
+    {
+      "field": "allergy information",
+      "status": "missing",
+      "reason": "Allergy context is not available for review."
+    },
+    {
+      "field": "periodontal assessment",
+      "status": "missing",
+      "reason": "The draft references gum tenderness and possible inflammation without periodontal findings."
+    },
+    {
+      "field": "systemic or urgent symptom details",
+      "status": "unknown",
+      "reason": "The source summary does not state whether swelling, fever, drainage, trauma, or systemic symptoms are present."
+    }
+  ],
+  "risk_assessment": {
+    "risk_level": "medium",
+    "reason": "The output is healthcare-adjacent and references possible infection or inflammation while key review context is missing. This is a workflow routing label, not a clinical risk score.",
+    "unsupported_or_sensitive_claims": [
+      {
+        "claim": "possible dental infection",
+        "review_note": "The source describes discomfort, chewing sensitivity, and gum tenderness, but does not include examination, imaging, swelling, fever, drainage, or diagnostic findings."
+      }
+    ]
+  },
+  "review_requirement": {
+    "human_review_required": true,
+    "required_reviewer": "qualified human reviewer for healthcare-adjacent content",
+    "review_reason": "The draft includes possible infection or inflammation language and missing review context."
+  },
+  "review_status": {
+    "status": "reviewed",
+    "reviewer_role": "healthcare-adjacent content reviewer",
+    "decision": "requires_revision",
+    "reviewer_comment": "Keep the output framed as a non-diagnostic summary. Add explicit missing-information flags and avoid presenting possible infection as an assessed finding."
+  },
+  "audit_events": [
+    {
+      "event_id": "audit-001",
+      "event_type": "packet_created",
+      "timestamp": "2026-06-11T00:00:00Z",
+      "actor": "toolkit_demo",
+      "details": "Clinical Review Packet created from synthetic case and AI-generated draft output."
+    },
+    {
+      "event_id": "audit-002",
+      "event_type": "human_review_recorded",
+      "timestamp": "2026-06-11T00:05:00Z",
+      "actor": "synthetic_reviewer",
+      "details": "Reviewer marked the draft as requiring revision before any downstream use."
+    }
+  ]
+}

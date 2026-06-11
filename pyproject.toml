@@ -1,0 +1,30 @@
+[project]
+name = "evidence-bound-clinical-review-toolkit"
+version = "0.4.2"
+description = "Portfolio-grade prototype for converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Dentist-trained healthcare AI workflow builder" }
+]
+keywords = [
+  "healthcare-ai",
+  "clinical-review",
+  "human-review",
+  "evidence-mapping",
+  "audit-infrastructure"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Software Development :: Quality Assurance"
+]
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests"
+]
