@@ -1,6 +1,6 @@
 [project]
 name = "evidence-bound-clinical-review-toolkit"
-version = "0.4.2"
+version = "0.4.3"
 description = "Portfolio-grade prototype for converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets."
 readme = "README.md"
 requires-python = ">=3.9"

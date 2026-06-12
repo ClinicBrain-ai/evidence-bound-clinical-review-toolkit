@@ -121,6 +121,7 @@ Reviewer decisions are workflow decisions, not proof of clinical correctness. So
 - [docs/VERSION_SCOPE.md](docs/VERSION_SCOPE.md): version scope and future gates
 - [docs/ROADMAP.md](docs/ROADMAP.md): safe portfolio improvements and out-of-scope work
 - [docs/RELEASE_DRAFT_V0_4_2.md](docs/RELEASE_DRAFT_V0_4_2.md): owner-reviewed release draft materials
+- [docs/public/LINKEDIN_BUILD_NOTE_V0_4_2.md](docs/public/LINKEDIN_BUILD_NOTE_V0_4_2.md): conservative public sharing draft for the v0.4.2 release
 - [CONTRIBUTING.md](CONTRIBUTING.md): safety-boundary rules, allowed contribution types, prohibited changes, and test expectations
 
 ## License
