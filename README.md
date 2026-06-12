@@ -26,6 +26,12 @@ Synthetic case summary
   -> Audit events
 ```
 
+## Relationship To Evaluation Harness
+
+The [Evidence-Bound AI Evaluation Harness](https://github.com/ClinicBrain-ai/evidence-bound-ai-evaluation-harness) sits one step before this toolkit. It reviews an AI-generated healthcare-adjacent output for evidence support, unsupported claims, missing context, uncertainty gaps, source conflicts, scope-boundary issues, and human-review routing.
+
+This toolkit then turns bounded healthcare-adjacent material into a Clinical Review Packet for human review. The relationship is workflow-oriented: evaluation report first, review packet second. Neither repository validates clinical correctness, recommends treatment, assesses medical safety, claims HIPAA compliance, or supports clinical deployment.
+
 ## What This Demonstrates
 
 - evidence-bound AI output review
