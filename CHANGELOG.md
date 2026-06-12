@@ -1,5 +1,21 @@
 # Changelog
 
+## Portfolio Publication Record
+
+- Added portfolio publication record.
+- Recorded public repo, release, GitHub pin, LinkedIn sharing, and LinkedIn Featured milestone.
+- Added no runtime behavior.
+- Added no clinical, compliance, production, HIPAA, or medical-device claims.
+
+## v0.4.3
+
+- Added LinkedIn build note draft.
+- Added LinkedIn feed post draft.
+- Added safe cover image asset and spec.
+- Added public sharing checklist.
+- Added no runtime behavior.
+- Added no clinical, compliance, production, HIPAA, or medical-device claims.
+
 ## v0.4.2
 
 - Added owner-led GitHub release draft materials.
